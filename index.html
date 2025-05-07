@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background-color: #4A90E2;
+            padding: 1rem;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            width: 120px;
+        }
+
+        .project-card {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #4A90E2;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #357ab7;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <header class="p-6 bg-blue-600 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Your Name</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-gray-200">About</a></li>
+                    <li><a href="#skills" class="hover:text-gray-200">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-gray-200">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 px-6 text-center" data-aos="fade-up">
+        <h2 class="section-title">About Me</h2>
+        <p class="max-w-2xl mx-auto text-lg">
+            I'm a passionate web developer with experience in creating interactive and user-friendly websites.
+            I specialize in front-end development with HTML, CSS, JavaScript, and frameworks like Bootstrap and Tailwind.
+        </p>
+    </section>
+
+    <section id="skills" class="py-16 px-6 bg-gray-100" data-aos="fade-up">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Tailwind</div>
+            <div class="skill-item">Bootstrap</div>
+            <div class="skill-item">React</div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 px-6" data-aos="fade-up">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="project-card" data-aos="zoom-in">
+                <img src="https://via.placeholder.com/400" alt="Project 1" class="project-image">
+                <h3 class="font-semibold mt-4">Project 1</h3>
+                <p>A brief description of the project, showcasing what was built.</p>
+            </div>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://via.placeholder.com/400" alt="Project 2" class="project-image">
+                <h3 class="font-semibold mt-4">Project 2</h3>
+                <p>A brief description of the project, showcasing what was built.</p>
+            </div>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://via.placeholder.com/400" alt="Project 3" class="project-image">
+                <h3 class="font-semibold mt-4">Project 3</h3>
+                <p>A brief description of the project, showcasing what was built.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6 bg-gray-100" data-aos="fade-up">
+        <h2 class="section-title">Contact</h2>
+        <form action="#" class="contact-form max-w-xl mx-auto">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="py-6 bg-blue-600 text-white text-center">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+
+</html>
